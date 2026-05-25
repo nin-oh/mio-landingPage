@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --pink-hot: #ff2d78;
-  --pink-mag: #e8007a;
-  --pink-deep: #8b0045;
-  --near-black: #0d0008;
-  --ice-blue: #c8f0ff;
-  --white: #ffffff;
+  --teal:       #00d9ff;
+  --teal-mid:   #0096c7;
+  --navy:       #03045e;
+  --near-black: #06060f;
+  --white:      #f4faff;
+  --red:        #ff1744;
+  --red-dark:   #9d0208;
+  --energy:     #ffe100;
 }
 
 html {
-  scroll-behavior: auto; /* GSAP owns smooth scrolling */
   background-color: var(--near-black);
+  scroll-behavior: auto;
 }
 
 body {
@@ -21,25 +23,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Reduced-motion: strip all durations globally, GSAP/FM will read this */
+/* Scene 4 horizontal speed lines */
+@keyframes whipRight {
+  from { transform: translateX(-130%); }
+  to   { transform: translateX(130%); }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: var(--near-black);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--pink-hot);
-  border-radius: 2px;
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,20 +8,21 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const bebas = Bebas_Neue({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-bebas",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "MIO — Clean Like a Dream",
-  description: "The world's most cinematic laundry detergent.",
+  title: "MIO MATIC — The Protector",
+  description: "The hero your fabrics deserve. Antibacterial laundry detergent.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${bebas.variable}`}>
       <body>{children}</body>
     </html>
   );

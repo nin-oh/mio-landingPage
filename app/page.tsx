@@ -1,21 +1,22 @@
 import { ReducedMotionProvider } from "@/lib/reduced-motion";
-import Hero from "@/components/sections/Hero";
-import ScrollRotate from "@/components/sections/ScrollRotate";
-import Power from "@/components/sections/Power";
-import FreshResult from "@/components/sections/FreshResult";
-import TrustRow from "@/components/sections/TrustRow";
-import CTA from "@/components/sections/CTA";
+import FlashOverlay from "@/components/effects/FlashOverlay";
+import Scene1Calm    from "@/components/scenes/Scene1Calm";
+import Scene2Threat  from "@/components/scenes/Scene2Threat";
+import Scene3Hero    from "@/components/scenes/Scene3Hero";
+import Scene4Clash   from "@/components/scenes/Scene4Clash";
+import Scene5Victory from "@/components/scenes/Scene5Victory";
 
 export default function Home() {
   return (
     <ReducedMotionProvider>
+      {/* Full-screen flash overlay — lives above everything, driven by GSAP */}
+      <FlashOverlay />
       <main>
-        <Hero />
-        <ScrollRotate />
-        <Power />
-        <FreshResult />
-        <TrustRow />
-        <CTA />
+        <Scene1Calm    />
+        <Scene2Threat  />
+        <Scene3Hero    />
+        <Scene4Clash   />
+        <Scene5Victory />
       </main>
     </ReducedMotionProvider>
   );
