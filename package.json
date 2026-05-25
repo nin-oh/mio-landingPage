@@ -1,0 +1,36 @@
+{
+  "name": "mio-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "gen:frames": "node scripts/generate-frames.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:43781/git/nin-oh/mio-landingPage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "canvas": "^3.2.3",
+    "framer-motion": "^12.40.0",
+    "gsap": "^3.15.0",
+    "next": "^16.2.6",
+    "postcss": "^8.5.15",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3"
+  }
+}
